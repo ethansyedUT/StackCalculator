@@ -34,4 +34,41 @@ output[6:0] segs;
 output[3:0] an;
 //WRITE THE FUNCTION OF THE CONTROLLER
 
+///////CMD Definitions /////////////////////
+localparam PUSH_CMD = 4'b0000;
+localparam POP_CMD = 4'b0001;
+localparam ADD_CMD = 4'b0010;
+localparam SUB_CMD = 4'b0011;
+localparam TOP_CMD = 4'b0100;
+localparam CLR_CMD = 4'b0101;
+localparam INC_CMD = 4'b0110;
+localparam DEC_CMD = 4'b0111;
+
+localparam INVALID_CMD = 4'b1000;
+
+///////State Definitions /////////////////////
+localparam WAIT_S = 4'b0000;
+
+///////Internal Registers/////////////////////
+reg [3:0] cur_state;
+reg [3:0] next_state;
+
+
+///////Internal Control Signals///////////////
+reg sub_r;
+
+//////////////////////////////////////////////
+
+
+always @(*)begin
+
+end
+
+
+always @(posedge clk)begin
+
+    
+
+end
+
 endmodule

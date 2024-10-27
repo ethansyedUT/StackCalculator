@@ -35,6 +35,12 @@ wire[7:0] data_out_mem;
 wire[7:0] data_out_ctrl;
 wire[7:0] data_bus;
 
+wire [15:0] exposed_DVR;
+wire [3:0] thou;
+wire [3:0] hundreds;
+wire [3:0] tens;
+wire [3:0] ones;
+
 //CHANGE THESE TWO LINES
 assign data_bus = 1; // 1st driver of the data bus -- tri state switches
 // function of we and data_out_ctrl
@@ -47,5 +53,8 @@ controller ctrl(clk, cs, we, addr, data_bus, data_out_ctrl,
 memory mem(clk, cs, we, addr, data_bus, data_out_mem);
 //add any other functions you need
 //(e.g. debouncing, multiplexing, clock-division, etc)
+
+Binary_to_BCD convert(exposed_DVR, thou, hunderds, tens, ones);
+Display_Controller(clk, thou, hundreds, tens, ones, seg, an);
 
 endmodule
