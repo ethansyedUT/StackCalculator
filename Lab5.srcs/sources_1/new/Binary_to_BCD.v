@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module Binary_to_BCD(
-    input wire [13:0] binary,
+    input wire [7:0] binary,
     output reg [3:0] thousands,
     output reg [3:0] hundreds,
     output reg [3:0] tens,

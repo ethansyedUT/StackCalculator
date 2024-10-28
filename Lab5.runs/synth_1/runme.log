@@ -1,0 +1,322 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 24296
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+INFO: [Synth 8-11241] undeclared symbol 'dbtnU', assumed default net type 'wire' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Input_Handler.v:29]
+INFO: [Synth 8-11241] undeclared symbol 'dbtnR', assumed default net type 'wire' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Input_Handler.v:30]
+INFO: [Synth 8-11241] undeclared symbol 'dbtnL', assumed default net type 'wire' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Input_Handler.v:31]
+INFO: [Synth 8-11241] undeclared symbol 'dbtnD', assumed default net type 'wire' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Input_Handler.v:32]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1205.742 ; gain = 408.352
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-6157] synthesizing module 'clkdiv' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/clkdiv.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clkdiv' (0#1) [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/clkdiv.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Input_Handler' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Input_Handler.v:22]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Input_Handler.v:79]
+INFO: [Synth 8-6157] synthesizing module 'my_dff' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Input_Handler.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'my_dff' (0#1) [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Input_Handler.v:94]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (0#1) [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Input_Handler.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'Input_Handler' (0#1) [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Input_Handler.v:22]
+INFO: [Synth 8-6157] synthesizing module 'controller' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/controller.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'controller' (0#1) [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/controller.v:23]
+INFO: [Synth 8-6157] synthesizing module 'memory' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/memory.v:21]
+INFO: [Synth 8-6155] done synthesizing module 'memory' (0#1) [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/memory.v:21]
+INFO: [Synth 8-6157] synthesizing module 'Binary_to_BCD' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Binary_to_BCD.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Binary_to_BCD' (0#1) [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Binary_to_BCD.v:22]
+INFO: [Synth 8-6157] synthesizing module 'Display_Controller' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Display_Controller.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Display_Controller' (0#1) [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Display_Controller.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/top.v:23]
+WARNING: [Synth 8-7129] Port thousands[3] in module Display_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port thousands[2] in module Display_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port thousands[1] in module Display_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port thousands[0] in module Display_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hundreds[3] in module Display_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hundreds[2] in module Display_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hundreds[1] in module Display_Controller is either unconnected or has no load
+WARNING: [Synth 8-7129] Port hundreds[0] in module Display_Controller is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1297.898 ; gain = 500.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1297.898 ; gain = 500.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1297.898 ; gain = 500.508
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1297.898 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/constrs_1/new/top.xdc]
+Finished Parsing XDC File [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/constrs_1/new/top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/constrs_1/new/top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1349.719 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1349.719 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1349.719 ; gain = 552.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1349.719 ; gain = 552.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1349.719 ; gain = 552.328
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'we_reg_reg' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/controller.v:100]
+WARNING: [Synth 8-327] inferring latch for variable 'address_reg' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/controller.v:143]
+WARNING: [Synth 8-327] inferring latch for variable 'data_out_reg' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/controller.v:147]
+WARNING: [Synth 8-327] inferring latch for variable 'DAR_reg' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/controller.v:99]
+WARNING: [Synth 8-327] inferring latch for variable 'SPR_reg' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/controller.v:98]
+WARNING: [Synth 8-327] inferring latch for variable 'DVR_reg' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/controller.v:147]
+WARNING: [Synth 8-327] inferring latch for variable 'mem_buf_reg' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/controller.v:111]
+WARNING: [Synth 8-327] inferring latch for variable 'cntrl_buf_reg' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/controller.v:110]
+WARNING: [Synth 8-327] inferring latch for variable 'sub_r_reg' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/controller.v:107]
+WARNING: [Synth 8-327] inferring latch for variable 'ret_n_reg' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/controller.v:165]
+WARNING: [Synth 8-327] inferring latch for variable 'op1_reg' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/controller.v:177]
+WARNING: [Synth 8-327] inferring latch for variable 'seg_reg' [C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Display_Controller.v:48]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1349.719 ; gain = 552.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   28 Bit       Adders := 1     
+	   3 Input    8 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 4     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               28 Bit    Registers := 1     
+	                8 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 13    
++---RAMs : 
+	             1024 Bit	(128 X 8 bit)          RAMs := 1     
++---Muxes : 
+	  15 Input    8 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    7 Bit        Muxes := 1     
+	  15 Input    7 Bit        Muxes := 1     
+	  14 Input    7 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	  24 Input    4 Bit        Muxes := 1     
+	  15 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+	  15 Input    1 Bit        Muxes := 14    
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3917] design top has port an[3] driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1349.719 ; gain = 552.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+-------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top         | mem/RAM_reg | 128 x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++------------+-------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1349.719 ; gain = 552.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1349.719 ; gain = 552.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+-------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object  | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|top         | mem/RAM_reg | 128 x 8(READ_FIRST)    | W | R |                        |   |   | Port A           | 1      | 0      | 
++------------+-------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance mem/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1349.719 ; gain = 552.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1349.719 ; gain = 552.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1349.719 ; gain = 552.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1349.719 ; gain = 552.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1349.719 ; gain = 552.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1349.719 ; gain = 552.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1349.719 ; gain = 552.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     2|
+|2     |CARRY4   |    16|
+|3     |LUT1     |     9|
+|4     |LUT2     |    16|
+|5     |LUT3     |    20|
+|6     |LUT4     |    34|
+|7     |LUT5     |    29|
+|8     |LUT6     |    76|
+|9     |MUXF7    |     1|
+|10    |RAMB18E1 |     1|
+|11    |FDRE     |    68|
+|12    |LD       |    60|
+|13    |IBUF     |    13|
+|14    |OBUF     |    19|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1349.719 ; gain = 552.328
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 1349.719 ; gain = 500.508
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1349.719 ; gain = 552.328
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1349.719 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 78 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 8 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1349.719 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 60 instances were transformed.
+  LD => LDCE: 53 instances
+  LD => LDCE (inverted pins: G): 7 instances
+
+Synth Design complete, checksum: 23839fa4
+INFO: [Common 17-83] Releasing license: Synthesis
+46 Infos, 22 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1349.719 ; gain = 930.305
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 27 22:44:51 2024...

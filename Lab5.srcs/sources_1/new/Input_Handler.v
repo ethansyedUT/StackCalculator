@@ -33,7 +33,10 @@ module Input_Handler(
 
     wire [3:0] concat;
     assign concat = {dbtnU, dbtnL, dbtnD, dbtnR};
-
+    
+    initial begin
+        CODE <= 4'b1000;
+    end
 
     // Switch handling
     always @(posedge clk) begin
