@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Sun Oct 27 22:45:22 2024
+| Date         : Mon Oct 28 00:31:33 2024
 | Host         : EthanWindows running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    14 |
-|    Minimum number of control sets                        |    14 |
+| Total control sets                                       |    11 |
+|    Minimum number of control sets                        |    11 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    40 |
+| Unused register locations in slices containing registers |    25 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,10 +39,10 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    14 |
-| >= 0 to < 4        |     4 |
-| >= 4 to < 6        |     1 |
-| >= 6 to < 8        |     4 |
+| Total control sets |    11 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     3 |
 | >= 8 to < 10       |     3 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
@@ -58,35 +58,32 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             100 |           39 |
+| No           | No                    | No                     |              42 |           18 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |              28 |            8 |
-| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              27 |           13 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               0 |            0 |
+| Yes          | Yes                   | No                     |              22 |           13 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+---------------------------------+---------------+-------------------------+------------------+----------------+--------------+
-|           Clock Signal          | Enable Signal |     Set/Reset Signal    | Slice Load Count | Bel Load Count | Bels / Slice |
-+---------------------------------+---------------+-------------------------+------------------+----------------+--------------+
-|  ctrl/sub_r_reg_i_2_n_0         |               |                         |                1 |              1 |         1.00 |
-|  ctrl/we_reg_reg_i_2_n_0        |               |                         |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG                  |               |                         |                1 |              1 |         1.00 |
-|  ctrl/mem_buf_reg_i_2_n_0       |               |                         |                2 |              2 |         1.00 |
-|  ctrl/ret_n_reg[3]_i_2_n_0      |               |                         |                1 |              4 |         4.00 |
-| ~nolabel_line75/digit_select[1] |               |                         |                2 |              7 |         3.50 |
-|  ctrl/SPR_reg[6]_i_2_n_0        |               |                         |                3 |              7 |         2.33 |
-|  ctrl/DAR_reg[6]_i_2_n_0        |               |                         |                4 |              7 |         1.75 |
-|  ctrl/address_reg[6]_i_2_n_0    |               |                         |                2 |              7 |         3.50 |
-|  ctrl/DVR_reg[7]_i_2_n_0        |               |                         |                3 |              8 |         2.67 |
-|  ctrl/data_out_reg[7]_i_2_n_0   |               |                         |                3 |              8 |         2.67 |
-|  ctrl/op1_reg[7]_i_2_n_0        |               |                         |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG                  |               | div/counter[27]_i_1_n_0 |                8 |             28 |         3.50 |
-|  slow_clk_BUFG                  |               |                         |               13 |             39 |         3.00 |
-+---------------------------------+---------------+-------------------------+------------------+----------------+--------------+
++----------------+--------------------------+---------------------+------------------+----------------+--------------+
+|  Clock Signal  |       Enable Signal      |   Set/Reset Signal  | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+--------------------------+---------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG |                          |                     |                1 |              1 |         1.00 |
+|  slow_clk_BUFG | ctrl/ret_n[3]_i_1_n_0    |                     |                2 |              4 |         2.00 |
+| ~slow_clk_BUFG |                          |                     |                4 |              4 |         1.00 |
+|  slow_clk_BUFG | ctrl/SPR[6]_i_2_n_0      | ctrl/SPR[6]_i_1_n_0 |                3 |              7 |         2.33 |
+|  slow_clk_BUFG | ctrl/DAR[6]_i_1_n_0      |                     |                5 |              7 |         1.40 |
+|  slow_clk_BUFG | ctrl/DAR[6]_i_1_n_0      | ctrl/SPR[6]_i_1_n_0 |                6 |              7 |         1.17 |
+|  slow_clk_BUFG | ctrl/DVR[7]_i_1_n_0      | ctrl/SPR[6]_i_1_n_0 |                4 |              8 |         2.00 |
+|  slow_clk_BUFG | ctrl/op1[7]_i_1_n_0      |                     |                2 |              8 |         4.00 |
+|  slow_clk_BUFG | ctrl/data_out[7]_i_1_n_0 |                     |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG |                          | div/p_0_in          |                8 |             28 |         3.50 |
+|  slow_clk_BUFG |                          |                     |               13 |             37 |         2.85 |
++----------------+--------------------------+---------------------+------------------+----------------+--------------+
 
 

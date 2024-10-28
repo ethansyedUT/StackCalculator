@@ -100,7 +100,7 @@ assign led[6:0] = DAR;
 assign cs = cs_reg;
 assign we = we_reg;
 
-always @(*)begin
+always @(posedge clk)begin
     // Next State Assignment
     case(cur_state)
         WAIT_S : begin
@@ -109,6 +109,7 @@ always @(*)begin
             cs_reg <= 0;
             cntrl_buf <= 0;
             mem_buf <= 0;
+            ret_n <= 0;
         
             // NS 
             case(CODE)
@@ -140,9 +141,9 @@ always @(*)begin
             mem_buf <= 0;
             cntrl_buf <= 1;
         
-            address <= SPR + 1;
-            SPR <= SPR +1;
-            DAR <= SPR + 1;
+            address <= SPR - 1;
+            SPR <= SPR - 1;
+            DAR <= SPR - 1;
             
             DVR <= sub_r ? data_out : sw;
             data_out <= sub_r ? data_out : sw;
@@ -156,9 +157,9 @@ always @(*)begin
             mem_buf <= 1;
             cntrl_buf <= 0;
             
-            address <= sub_r ? SPR : SPR - 1;
-            SPR <= SPR -1;
-            DAR <= SPR - 1;
+            address <= sub_r ? SPR : SPR + 1;
+            SPR <= SPR + 1;
+            DAR <= SPR + 1;
             
             
             // NS
@@ -231,16 +232,16 @@ always @(*)begin
             next_state <= WAIT_S;
         end
         INC : begin
-            DAR <= DAR + 1;
-            address <= DAR + 1;
+            DAR <= DAR - 1;
+            address <= DAR - 1;
             mem_buf <= 1;
             cntrl_buf <= 0;
             // NS
             next_state <= DVR_WRITE;
         end
         DEC : begin
-            DAR <= DAR - 1;
-            address <= DAR - 1;
+            DAR <= DAR + 1;
+            address <= DAR + 1;
             mem_buf <= 1;
             cntrl_buf <= 0;
             // NS
@@ -266,7 +267,7 @@ always @(*)begin
 end
 
 
-always @(posedge clk)begin
+always @(negedge clk)begin
     cur_state <= next_state;
 end
 

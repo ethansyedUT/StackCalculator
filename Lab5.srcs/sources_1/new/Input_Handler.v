@@ -32,7 +32,7 @@ module Input_Handler(
     debounce u_debounce_D(btnD, clk, dbtnD);
 
     wire [3:0] concat;
-    assign concat = {dbtnU, dbtnL, dbtnD, dbtnR};
+    assign concat = {btnU, btnL, dbtnD, dbtnR};
     
     initial begin
         CODE <= 4'b1000;

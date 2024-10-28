@@ -88,7 +88,6 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Binary_to_BCD.v
   C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Display_Controller.v
   C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/Input_Handler.v
   C:/Users/Ethan/Desktop/Classes/ECE460M-DigitalSysDesign/Labs/Lab5/Lab5.srcs/sources_1/new/clkdiv.v

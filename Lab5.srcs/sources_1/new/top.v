@@ -71,7 +71,6 @@ memory mem(slow_clk, cs, we, addr, data_bus, data_out_mem);
 //add any other functions you need
 //(e.g. debouncing, multiplexing, clock-division, etc)
 
-Binary_to_BCD convert(exposed_DVR, thou, hundreds, tens, ones);
-Display_Controller(slow_clk, thou, hundreds, tens, ones, seg, an);
+Display_Controller(slow_clk, exposed_DVR, seg, an);
 
 endmodule
